@@ -1,0 +1,30 @@
+{
+  "name": "sandbox-mdn-web-development",
+  "description": "A sandbox for implementing examples and exercises from MDN's \"Learn web development\" set of articles.",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --open --config webpack.dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Max-N89/sandbox-mdn-web-development.git"
+  },
+  "author": "Maksym Nikishyn <4work.maxn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Max-N89/sandbox-mdn-web-development/issues"
+  },
+  "homepage": "https://github.com/Max-N89/sandbox-mdn-web-development#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@webpack-cli/generators": "^2.0.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
