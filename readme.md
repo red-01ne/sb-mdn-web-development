@@ -6,7 +6,7 @@ A sandbox for implementing examples and exercises
 
 ## Covered modules and topics
 
-* [ ] Getting started with the Web
+* [x] Getting started with the Web
 * [ ] HTML - structuring the Web
 * [ ] CSS - styling the Web
 * [ ] JavaScript - dynamic client-side scripting
