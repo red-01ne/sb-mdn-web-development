@@ -8,6 +8,9 @@ A sandbox for implementing examples and exercises
 
 * [x] Getting started with the Web
 * [ ] HTML - structuring the Web
+  - [x] Introduction to HTML
+  - [ ] Multimedia and embedding
+  - [ ] HTML tables
 * [ ] CSS - styling the Web
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
