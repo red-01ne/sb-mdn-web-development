@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - video and audio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>Some Examples of Embedding Multimedia Content With HTML</h1>
+</header>
+<main>
+    <section>
+        <figure>
+            <figcaption>Basic video example</figcaption>
+            <video controls src="assets/video/rabbit/rabbit320.webm">
+                <p>Your browser doesn't support HTML5 video.
+                    Here is a <a href="assets/video/rabbit/rabbit320.webm">link to the video</a> instead.</p>
+            </video>
+        </figure>
+    </section>
+    <section>
+        <figure>
+            <figcaption>Multiple video container file formats</figcaption>
+            <video controls>
+                <source type="video/mp4" src="assets/video/rabbit/rabbit320.mp4">
+                <source type="video/webm" src="assets/video/rabbit/rabbit320.webm">
+                <p>Your browser doesn't support HTML5 video.
+                    Here is a <a href="assets/video/rabbit/rabbit320.webm">link to the video</a> instead.</p>
+            </video>
+        </figure>
+    </section>
+    <section>
+        <figure>
+            <figcaption>Additional HTML &lt;video&gt; tag features</figcaption>
+            <video controls width="400" height="400"
+                   autoplay loop muted preload="auto"
+                   poster="assets/video/rabbit/poster.png">
+                <source type="video/webm" src="assets/video/rabbit/rabbit320.webm">
+                <source type="video/mp4" src="assets/video/rabbit/rabbit320.mp4">
+                <p>Your browser doesn't support HTML5 video.
+                    Here is a <a href="assets/video/rabbit/rabbit320.webm">link to the video</a> instead.</p>
+            </video>
+        </figure>
+    </section>
+    <section>
+        <figure>
+            <figcaption>Basic audio example</figcaption>
+            <audio controls>
+                <source type="audio/mp3" src="assets/audio/viper.mp3">
+                <source type="audio/ogg" src="assets/audio/viper.ogg">
+                <p>Your browser doesn't support HTML5 audio.
+                    Here is a <a href="assets/audio/viper.mp3">link to the audio</a> instead.</p>
+            </audio>
+        </figure>
+    </section>
+    <section>
+        <figure>
+            <figcaption>Example of video text tracks</figcaption>
+            <video controls>
+                <source type="video/mp4" src="assets/video/sintel-short/sintel-short.mp4">
+                <source type="video/webm" src="assets/video/sintel-short/sintel-short.webm">
+                <track default kind="subtitles" srclang="en" label="English" src="assets/vtt/sintel-short/sintel-short-en.vtt">
+                <track kind="subtitles" srclang="de" label="Deutsch" src="assets/vtt/sintel-short/sintel-short-de.vtt">
+                <track kind="subtitles" srclang="es" label="Español" src="assets/vtt/sintel-short/sintel-short-es.vtt">
+                <p>Your browser doesn't support HTML5 video.
+                    Here is a <a href="assets/video/rabbit/rabbit320.webm">link to the video</a> instead.</p>
+            </video>
+        </figure>
+    </section>
+</main>
+</body>
+</html>
