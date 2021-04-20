@@ -4,12 +4,12 @@ A sandbox for implementing examples and exercises
  from MDN's ["Learn web development"](https://developer.mozilla.org/en-US/docs/Learn)
   set of articles.
 
-## Covered modules and topics
+## Covered sections and modules
 
 * [x] Getting started with the Web
 * [ ] HTML - structuring the Web
   - [x] Introduction to HTML
-  - [ ] Multimedia and embedding
+  - [x] Multimedia and embedding
   - [ ] HTML tables
 * [ ] CSS - styling the Web
 * [ ] JavaScript - dynamic client-side scripting
