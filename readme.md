@@ -7,10 +7,10 @@ A sandbox for implementing examples and exercises
 ## Covered sections and modules
 
 * [x] Getting started with the Web
-* [ ] HTML - structuring the Web
+* [x] HTML - structuring the Web
   - [x] Introduction to HTML
   - [x] Multimedia and embedding
-  - [ ] HTML tables
+  - [x] HTML tables
 * [ ] CSS - styling the Web
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
