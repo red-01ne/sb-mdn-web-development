@@ -12,6 +12,10 @@ A sandbox for implementing examples and exercises
   - [x] Multimedia and embedding
   - [x] HTML tables
 * [ ] CSS - styling the Web
+  - [x] CSS first steps
+  - [ ] CSS building blocks
+  - [ ] Styling text
+  - [ ] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
 * [ ] Accessibility - make the Web usable by everyone
