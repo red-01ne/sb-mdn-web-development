@@ -4,11 +4,18 @@ A sandbox for implementing examples and work on exercises
  from MDN's ["Learn web development"](https://developer.mozilla.org/en-US/docs/Learn)
   set of articles.
 
-## Covered sections
+## Covered sections and modules
 
-* [ ] Getting started with the web
-* [ ] HTML - structuring the web
+* [x] Getting started with the web
+* [x] HTML - structuring the web
+  - [x] Introduction to HTML
+  - [x] Multimedia and embedding
+  - [x] HTML tables
 * [ ] CSS - styling the web
+  - [x] CSS first steps
+  - [x] CSS building blocks
+  - [ ] Styling text
+  - [ ] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
 * [ ] Accessibility - make the web usable by everyone

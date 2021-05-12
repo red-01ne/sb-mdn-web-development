@@ -1,0 +1,40 @@
+body {
+    box-sizing: border-box;
+    width: 85%;
+    min-width: 900px;
+    min-height: 100vh;
+    margin: 0 auto;
+    border-left: 3px solid red;
+    border-right: 3px solid crimson;
+}
+header {
+    padding: 20px;
+    background-color: lightgrey;
+}
+h1 {
+    text-align: center;
+}
+section {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px;
+    padding: 30px;
+    border: 2px solid gray;
+    border-radius: 7px;
+}
+figure {
+    margin: 0;
+}
+figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+figure > video,
+figure > audio {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: green;
+}

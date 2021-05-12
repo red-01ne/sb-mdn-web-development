@@ -1,0 +1,22 @@
+html {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#cool_box {
+    width: 20rem;
+    height: 5rem;
+    margin: 10rem auto 0;
+    /*border: 2px solid darkred;*/
+    border-radius: 2rem;
+    box-shadow:
+            5px 5px 10px black,
+            inset 3px 3px 5px rgba(255, 255, 255, .5),
+            inset -3px -3px 5px rgba(0, 0, 0, .5);
+    color: firebrick;
+    font-size: 2rem;
+    line-height: 2.5;
+    text-align: center;
+    text-shadow: 3px 3px 1px black;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2) 70%), firebrick;
+}

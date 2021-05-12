@@ -1,0 +1,32 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    background-color: greenyellow;
+}
+header, section {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: limegreen;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+
+}
+#dynamic_list_container ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#dynamic_list_container ul::before {
+    content: "Dynamic list:";
+}
+#dynamic_list_container li {
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px 15px;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
