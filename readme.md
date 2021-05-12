@@ -13,7 +13,7 @@ A sandbox for implementing examples and exercises
   - [x] HTML tables
 * [ ] CSS - styling the Web
   - [x] CSS first steps
-  - [ ] CSS building blocks
+  - [x] CSS building blocks
   - [ ] Styling text
   - [ ] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
