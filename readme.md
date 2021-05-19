@@ -14,7 +14,7 @@ A sandbox for implementing examples and exercises
 * [ ] CSS - styling the Web
   - [x] CSS first steps
   - [x] CSS building blocks
-  - [ ] Styling text
+  - [x] Styling text
   - [ ] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
