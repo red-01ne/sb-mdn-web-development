@@ -1,0 +1,80 @@
+html {
+    font-family: sans-serif;
+    /*box-sizing: border-box;*/
+}
+
+*, *::before, *::after {
+    /*box-sizing: inherit;*/
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 800px;
+    border-right: 5px solid purple;
+    border-left: 5px solid purple;
+}
+
+header {
+    height: 100px;
+    margin: 0;
+    background: purple;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+}
+
+main > section {
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    /*flex-wrap: wrap;*/
+    flex-flow: row wrap;
+}
+
+main > section > article {
+    /*flex: 200px;*/
+    flex: 1 200px;
+}
+
+main > section > article:nth-child(3n) {
+    flex: 3 600px;
+    display: flex;
+    flex-flow: column;
+}
+
+.buttons-container {
+    flex: 1 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    order: -1;
+}
+
+.buttons-container button {
+    flex: 1 auto;
+    margin: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.buttons-container button:first-child {
+    /*align-self: flex-end;*/
+    order: 1;
+}
+
+.buttons-container button:last-child {
+    order: -1;
+}
