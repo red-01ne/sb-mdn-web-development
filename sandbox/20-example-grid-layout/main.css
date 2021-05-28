@@ -1,0 +1,137 @@
+/* ## general setup */
+
+body {
+    width: 90%;
+    max-width: 900px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-right: 5px solid #6888bd;
+    border-left: 5px solid #6888bd;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+main > section {
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+main > section:first-child {
+    border-top: 1px solid gray;
+}
+
+main > section:last-child {
+    border-bottom: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* ## first example */
+
+#simple_grid {
+    display: grid;
+    /*grid-template-columns: 1.5fr 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    gap: 20px;
+}
+
+#simple_grid > div {
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+    border-radius: 5px;
+}
+
+#simple_grid > div:nth-child(3n + 1) {
+    text-align: center;
+}
+
+/* ## second example */
+
+#placement {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+            "header header"
+            "sidebar content"
+            "footer footer";
+    grid-gap: 20px;
+}
+
+#placement > header,
+#placement > footer {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+}
+
+#placement > header {
+    /*grid-column: 1 / 3;*/
+    /*grid-row: 1;*/
+    grid-area: header;
+}
+
+#placement > article {
+    /*grid-column: 2;*/
+    /*grid-row: 2;*/
+    grid-area: content;
+}
+
+#placement > aside {
+    /*grid-column: 1;*/
+    /*grid-row: 2;*/
+    grid-area: sidebar;
+    border-right: 1px solid #999;
+}
+
+#placement > footer {
+    /*grid-column: 1 / 3;*/
+    /*grid-row: 3;*/
+    grid-area: footer;
+}
+
+/* ## third example */
+
+#framework {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+#framework > header,
+#framework > footer {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+}
+
+#framework > header {
+    grid-column: 1 / 13;
+    grid-row: 1;
+}
+
+#framework > article {
+    grid-column: 4 / 13;
+    grid-row: 2;
+}
+
+#framework > aside {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    border-right: 1px solid #999;
+}
+
+#framework > footer {
+    grid-column: 1 / 13;
+    grid-row: 3;
+}
