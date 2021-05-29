@@ -1,0 +1,91 @@
+body {
+    width: 500px;
+    height: 200vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+}
+
+span {
+    background: red;
+    border: 1px solid black;
+}
+
+.positioned {
+    /*position: static;*/
+    /*position: relative;*/
+    position: absolute;
+    /*top: 50px;*/
+    /*left: 50px;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin: 0;*/
+    background-color: yellow;
+}
+
+.positioned::before {
+    content: "positioned";
+    display: block;
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    padding: 0;
+    margin: 0;
+    border: 3px solid blue;
+    background-color: gold;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.positioned.first {
+    top: 250px;
+    left: 50px;
+    z-index: 2;
+}
+
+.positioned.second {
+    top: 300px;
+    left: 100px;
+    z-index: 0;
+    background: lime;
+}
+
+body > h1 {
+    box-sizing: border-box;
+    width: 500px;
+    margin-top: 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: auto;
+    z-index: 1;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 20px;
+}
+
+body > p:nth-of-type(1) {
+    margin-top: 60px;
+}
+
+body > p:last-of-type {
+    height: 400px;
+}
+
+span {
+    position: sticky;
+    top: 60px;
+    left: 30px;
+}
