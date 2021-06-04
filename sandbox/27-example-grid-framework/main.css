@@ -1,0 +1,9 @@
+.row {
+    margin-top: 20px;
+}
+.column, .columns {
+    background-color: #97DB9A;
+    border: 3px solid lightseagreen;
+    border-radius: 20px;
+    text-align: center;
+}

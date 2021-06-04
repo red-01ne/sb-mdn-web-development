@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Example - legacy layout</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<main>
+    <header>
+        <h1>Legacy layout methods</h1>
+    </header>
+    <section class="two-column float-grid">
+        <h2>2 column layout example</h2>
+        <article class="column left">
+            <h3>First column</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor,
+                eu lacinia lorem placerat vulputate. Duis felis orci,
+                pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+                at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+                Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+                Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+                Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+                Aenean finibus sollicitudin eros pharetra congue.
+                Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna.
+                Ut id ornare felis, eget fermentum sapien.</p>
+        </article>
+
+        <article class="column right">
+            <h3>Second column</h3>
+            <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices.
+                Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.
+                Nam id risus quis ante semper consectetur eget aliquam lorem.
+                Vivamus tristique elit dolor, sed pretium metus suscipit vel.
+                Mauris ultricies lectus sed lobortis finibus.
+                Vivamus eu urna eget velit cursus viverra quis vestibulum sem.
+                Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus.</p>
+        </article>
+    </section>
+    <section class="twelve-column float-grid fixed-width">
+        <h2>A simple <strong>fixed width</strong> grid</h2>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col">5</div>
+                <div class="col">6</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">10</div>
+                <div class="col">11</div>
+                <div class="col">12</div>
+            </div>
+            <div class="row">
+                <div class="col span1">13</div>
+                <div class="col span6">14</div>
+                <div class="col span3">15</div>
+                <div class="col span2">16</div>
+            </div>
+            <div class="row">
+                <div class="col span8">17</div>
+                <div class="col span4">18</div>
+            </div>
+        </div>
+    </section>
+    <section class="twelve-column float-grid fluid-width">
+        <h2>A simple <strong>fluid width</strong> grid</h2>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col">5</div>
+                <div class="col">6</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">10</div>
+                <div class="col">11</div>
+                <div class="col">12</div>
+            </div>
+            <div class="row">
+                <div class="col span1">13</div>
+                <div class="col span6">14</div>
+                <div class="col span3">15</div>
+                <div class="col span2">16</div>
+            </div>
+            <div class="row">
+                <div class="col span8">17</div>
+                <div class="col span4">18</div>
+            </div>
+        </div>
+    </section>
+    <section class="twelve-column float-grid fluid-width with-offset">
+        <h2>A simple <strong>fluid width</strong> grid <strong>with offset</strong></h2>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col">5</div>
+                <div class="col">6</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">10</div>
+                <div class="col">11</div>
+                <div class="col">12</div>
+            </div>
+            <div class="row">
+                <div class="col span1">13</div>
+                <div class="col span5 offset-by-one">14</div>
+                <div class="col span2 offset-by-one">15</div>
+                <div class="col span2">16</div>
+            </div>
+            <div class="row">
+                <div class="col span7 offset-by-one">17</div>
+                <div class="col span4">18</div>
+            </div>
+        </div>
+    </section>
+    <section class="twelve-column flexbox-grid fluid-width">
+        <h2>A <strong>flexbox</strong> grid</h2>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col">5</div>
+                <div class="col">6</div>
+                <div class="col">7</div>
+                <div class="col">8</div>
+                <div class="col">9</div>
+                <div class="col">10</div>
+                <div class="col">11</div>
+                <div class="col">12</div>
+            </div>
+            <div class="row">
+                <div class="col span1">13</div>
+                <div class="col span6">14</div>
+                <div class="col span3">15</div>
+                <div class="col span2">16</div>
+            </div>
+            <div class="row">
+                <div class="col span8">17</div>
+                <div class="col span4">18</div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

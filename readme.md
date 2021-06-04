@@ -11,11 +11,11 @@ A sandbox for implementing examples and work on exercises
   - [x] Introduction to HTML
   - [x] Multimedia and embedding
   - [x] HTML tables
-* [ ] CSS - styling the web
+* [x] CSS - styling the web
   - [x] CSS first steps
   - [x] CSS building blocks
-  - [ ] Styling text
-  - [ ] CSS layout
+  - [x] Styling text
+  - [x] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
 * [ ] Accessibility - make the web usable by everyone
