@@ -2,18 +2,19 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-    mode: "development",
     target: "web",
+    mode: "development",
     devtool: "eval-source-map",
     devServer: {
-        port: 9000,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.join(__dirname, "dist"),
+        watchContentBase: true,
+        overlay: true
     },
     entry: {
-        main: "./src/index.js",
+        app: "./src/index.js",
     },
     output: {
-        filename: "[name].js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "./dist"),
         publicPath: "/",
         clean: true,
@@ -30,17 +31,17 @@ const config = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
+                use: [
+                    "style-loader",
+                    "css-loader"
+                ]
             },
             {
                 test: /\.m?js$/i,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-env"]
-                    }
-                }
+                use: [
+                    "babel-loader"
+                ]
             },
         ]
     },
