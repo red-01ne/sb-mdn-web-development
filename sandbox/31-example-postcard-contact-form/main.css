@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "handwriting";
+    src: url("./assets/fonts/journal-webfont.woff2") format("woff2"),
+         url("./assets/fonts/journal-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "typewriter";
+    src: url("./assets/fonts/veteran-typewriter-webfont.woff2") format("woff2"),
+         url("./assets/fonts/veteran-typewriter-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font: 1.3rem sans-serif;
+    padding: .5rem;
+    margin: 0;
+    background: #222;
+}
+
+h1 {
+    align-self: end;
+    margin-left: 1.5em;
+    font: 1em "typewriter", monospace;
+}
+
+form {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10em 1em 1em 5em;
+    position: relative;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 740px;
+    height: 498px;
+    background: #FFF url("./assets/background.jpg");
+}
+
+label {
+    margin-left: 1em;
+    font: .8em "typewriter", sans-serif;
+}
+
+input,
+textarea {
+    margin: 0;
+    border: none;
+    padding: 0 10px;
+    width: 80%;
+    background: none;
+    font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+}
+
+textarea {
+    display: block;
+    margin: 10px 0 0 -10px;
+    border-right: 1px solid;
+    padding: 10px;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    resize: none;
+    text-indent: 1.5rem;
+}
+
+button {
+    align-self: end;
+    transform: rotate(-1.5deg);
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    font: bold .6em sans-serif;
+}
+
+button::after {
+    content: " >>>";
+}
+
+input:focus,
+textarea:focus {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(0, 0, 0, .1);
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background: #000;
+    color: #FFF;
+}
+
+#message {
+    grid-row: 1 / 5;
+}
+
+#from,
+#reply {
+    display: flex;
+}
