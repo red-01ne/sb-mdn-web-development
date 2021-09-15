@@ -1,0 +1,71 @@
+body {
+    margin: auto;
+    width: 1440px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+            "form output-1 output-2";
+    gap: 2rem;
+    margin-top: 2rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.form-container > *:not(:first-child) {
+    border-left: 6px solid #6888bd;
+    padding-left: 2rem;
+}
+
+.form-container > form {
+    grid-area: form;
+}
+
+.form-container > output:nth-of-type(1) {
+    grid-area: output-1;
+}
+
+.form-container > output:nth-of-type(2) {
+    grid-area: output-2;
+}
+
+form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+form li + li {
+    margin-top: .3rem;
+}
+
+label,
+input {
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+label {
+    width: 25%;
+    text-align: right;
+}
+
+input {
+    width: calc(75% - 1em);
+}
+
+button {
+    display: block;
+    margin: .5rem auto;
+    text-align: center;
+}
+
+output {
+    display: block;
+    white-space: pre;
+}

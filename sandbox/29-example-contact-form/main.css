@@ -1,0 +1,71 @@
+#contact_form {
+    /* center the form on the page */
+    margin: 5vh auto;
+    width: 500px;
+    /* form outline */
+    padding: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 1em;
+}
+
+#contact_form * {
+    margin: 0;
+    padding: 0;
+}
+
+#contact_form ul {
+    list-style: none;
+}
+
+#contact_form li + li {
+    margin-top: 1em;
+}
+
+#contact_form label {
+    /* uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+#contact_form input,
+#contact_form textarea {
+    /* to make sure that all text fields have the same font settings */
+    /* by default, text areas have a monospace font */
+    font: 1em sans-serif;
+    /* uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    /* match form field borders */
+    border: 1px solid #999;
+}
+
+#contact_form input:focus,
+#contact_form textarea:focus {
+    /* additional highlight for focused elements */
+    border-color: #000;
+}
+
+#contact_form textarea {
+    /* align multiline text fields with their labels */
+    vertical-align: top;
+    /* provide space to type some text */
+    height: 5em;
+}
+
+#contact_form .button {
+    /* align buttons with the text fields */
+    margin-left: 90px; /* same size as the label elements */
+}
+
+#contact_form button {
+    /* this extra margin represent roughly the same space as the space between the labels and their text fields */
+    /*margin-left: .5em;*/
+}
+
+/* alternative left offset for button which represents the space between the labels and their text text fields */
+#contact_form .button::before {
+    content: " ";
+    display: inline-block;
+    visibility: hidden;
+}

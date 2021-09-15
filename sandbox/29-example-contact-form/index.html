@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example - contact form</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+<!--<form id="contact_form" action="/my-handling-form-page" method="post">-->
+<form id="contact_form" onsubmit="return false;">
+    <ul>
+        <li>
+            <label for="contact_form_user_name">Name:</label>
+            <input id="contact_form_user_name" type="text" name="user_name"/>
+        </li>
+        <li>
+            <label for="contact_form_user_email">E-mail:</label>
+            <input id="contact_form_user_email" type="email" name="user_email"/>
+        </li>
+        <li>
+            <label for="contact_form_user_message">Message:</label>
+            <textarea id="contact_form_user_message" name="user_message"></textarea>
+        </li>
+        <li class="button">
+            <button type="submit">Send your message</button>
+        </li>
+    </ul>
+</form>
+</body>
+</html>
