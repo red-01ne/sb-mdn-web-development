@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example - form elements</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+<section class="form-container">
+    <form id="from_a">
+        <ul>
+            <li>
+                <label for="form_a_text">Text:</label>
+                <input id="form_a_text" type="text" name="text">
+            </li>
+            <li>
+                <label for="form_a_psw">Password:</label>
+                <input id="form_a_psw" type="password" name="psw">
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Choose all the vegetables you like to eat</legend>
+                    <ul>
+                        <li>
+                            <label for="form_a_carrots">Carrots</label>
+                            <input id="form_a_carrots" type="checkbox" name="vegetable" value="carrots" checked>
+                        </li>
+                        <li>
+                            <label for="form_a_peas">Peas</label>
+                            <input id="form_a_peas" type="checkbox" name="vegetable" value="peas">
+                        </li>
+                        <li>
+                            <label for="form_a_cabbage">Cabbage</label>
+                            <input id="form_a_cabbage" type="checkbox" name="vegetable" value="cabbage">
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>What is your favorite meal?</legend>
+                    <ul>
+                        <li>
+                            <label for="form_a_soup">Soup</label>
+                            <input id="form_a_soup" type="radio" name="meal" value="soup" checked>
+                        </li>
+                        <li>
+                            <label for="form_a_curry">Curry</label>
+                            <input id="form_a_curry" type="radio" name="meal" value="curry">
+                        </li>
+                        <li>
+                            <label for="form_a_pizza">Pizza</label>
+                            <input id="form_a_pizza" type="radio" name="meal" value="pizza">
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+            <li>
+                <input id="timestamp" type="hidden" name="timestamp" value="1286705410">
+            </li>
+        </ul>
+        <button type="submit">SUBMIT</button>
+    </form>
+</section>
+<section class="form-container">
+    <form id="form_b">
+        <ul>
+            <li>
+                <label for="form_b_email">Email:</label>
+                <input id="form_b_email" type="email" name="email">
+            </li>
+            <li>
+                <label for="form_b_search">Search:</label>
+                <input id="form_b_search" type="search" name="search">
+            </li>
+            <li>
+                <label for="form_b_tel">Telephone:</label>
+                <input id="form_b_tel" type="tel" name="telephone">
+            </li>
+            <li>
+                <label for="form_b_url">URL:</label>
+                <input id="form_b_url" type="url" name="url">
+            </li>
+            <li>
+                <label for="form_b_number">Number:</label>
+                <input id="form_b_number" type="number" name="number">
+            </li>
+            <li>
+                <label for="form_b_price">Price: </label>
+                <input id="form_b_price" type="range" name="price" min="50000" max="500000" step="100" value="250000">
+            </li>
+            <li>
+                <label for="form_b_datetime_local">Datetime local:</label>
+                <input id="form_b_datetime_local" type="datetime-local" name="datetime">
+            </li>
+            <li>
+                <label for="form_b_month">Month:</label>
+                <input id="form_b_month" type="month" name="month">
+            </li>
+            <li>
+                <label for="form_b_time">Time</label>
+                <input id="form_b_time" type="time" name="time">
+            </li>
+            <li>
+                <label for="form_b_week">Week:</label>
+                <input id="form_b_week" type="week" name="week">
+            </li>
+            <li>
+                <label for="form_b_color">Color:</label>
+                <input id="form_b_color" type="color" name="color">
+            </li>
+        </ul>
+        <button type="submit">SUBMIT</button>
+    </form>
+</section>
+<section class="form-container">
+    <form id="form_c">
+        <ul>
+            <li>
+                <label for="form_c_simple_select">Simple select:</label>
+                <select id="form_c_simple_select" name="simple_select">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Lemon</option>
+                </select>
+            </li>
+            <li>
+                <label for="groups">Select box with option groups:</label>
+                <select id="groups" name="groups">
+                    <optgroup label="fruits">
+                        <option>Banana</option>
+                        <option selected>Cherry</option>
+                        <option>Lemon</option>
+                    </optgroup>
+                    <optgroup label="vegetables">
+                        <option>Carrot</option>
+                        <option>Eggplant</option>
+                        <option>Potato</option>
+                    </optgroup>
+                </select>
+            </li>
+            <p>
+                <label for="multi">Select box allowing multiple selections:</label>
+                <select multiple id="multi" name="multi">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Lemon</option>
+                </select>
+            </p>
+            <p>
+                <label for="myFruit">What's your favorite fruit?</label>
+                <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+                <datalist id="mySuggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="myFruit">What is your favorite fruit? (With fallback)</label>
+                <input type="text" id="myFruit" name="fruit" list="fruitList">
+                <datalist id="fruitList">   <label for="suggestion">or pick a fruit</label>
+                    <select id="suggestion" name="altFruit">
+                        <option>Apple</option>
+                        <option>Banana</option>
+                        <option>Blackberry</option>
+                        <option>Blueberry</option>
+                        <option>Lemon</option>
+                        <option>Lychee</option>
+                        <option>Peach</option>
+                        <option>Pear</option>
+                    </select>
+                </datalist>
+            </p>
+        </ul>
+        <button type="submit">SUBMIT</button>
+    </form>
+</section>
+</body>
+</html>
