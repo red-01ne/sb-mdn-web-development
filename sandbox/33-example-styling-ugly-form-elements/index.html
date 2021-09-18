@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example - styling "ugly" form elements</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+<div class="grid-container">
+    <section>
+        <h2>Form elements without appearance property change</h2>
+        <form class="default">
+            <p>
+                <label for="default_text">text: </label>
+                <input id="default_text" name="text" type="text">
+            </p>
+            <p>
+                <label for="default_search">search: </label>
+                <input id="default_search" name="search" type="search">
+            </p>
+            <p>
+                <label for="default_radio">radio: </label>
+                <input id="default_radio" name="radio" type="radio">
+            </p>
+            <p>
+                <label for="default_checkbox">checkbox: </label>
+                <input id="default_checkbox" name="checkbox" type="checkbox">
+            </p>
+            <p>
+                <label for="default_date">date: </label>
+                <input id="default_date" name="date" type="datetime-local">
+            </p>
+            <p><input type="button" value="button"></p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+    </section>
+    <section>
+        <h2>Form elements with appearance property set to none</h2>
+        <form class="appearance-none">
+            <p>
+                <label for="appearance_none_text">text: </label>
+                <input id="appearance_none_text" name="text" type="text">
+            </p>
+            <p>
+                <label for="appearance_none_search">search: </label>
+                <input id="appearance_none_search" name="search" type="search">
+            </p>
+            <p>
+                <label for="appearance_none_radio">radio: </label>
+                <input id="appearance_none_radio" name="radio" type="radio">
+            </p>
+            <p>
+                <label for="appearance_none_checkbox">checkbox: </label>
+                <input id="appearance_none_checkbox" name="checkbox" type="checkbox">
+            </p>
+            <p>
+                <label for="appearance_none_date">date: </label>
+                <input id="appearance_none_date" name="date" type="datetime-local">
+            </p>
+            <p><input type="button" value="button"></p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+    </section>
+    <section>
+        <h2>Checkboxes without appearance property change</h2>
+        <form>
+            <fieldset>
+                <legend>Fruit preferences</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-1" value="cherry">
+                        I like cherry
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-2" value="banana" disabled>
+                        I can't like banana
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-3" value="strawberry">
+                        I like strawberry
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Styled checkboxes with appearance property set to none</h2>
+        <form class="appearance-none styled-checkboxes">
+            <fieldset>
+                <legend>Fruit preferences</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-1" value="cherry">
+                        I like cherry
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-2" value="banana" disabled>
+                        I can't like banana
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="fruit-3" value="strawberry">
+                        I like strawberry
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Styled radio buttons with appearance property set to none</h2>
+        <form class="appearance-none styled-radio">
+            <fieldset>
+                <legend>Choose your favourite fruit</legend>
+
+                <p>
+                    <label>
+                        <input type="radio" name="fruit" value="cherry">
+                        Cherry
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="fruit" value="banana">
+                        Banana
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="fruit" value="strawberry">
+                        Strawberry
+                    </label>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Toggle switch example</h2>
+        <form class="appearance-none">
+            <div class="toggle-switch-container">
+                <input id="toggle_switch_power" class="toggle-switch" type="checkbox" name="power">
+                <label for="toggle_switch_power"><span class="toggle-switch-on">On</span><span class="toggle-switch-off">Off</span></label>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>
+            "Ugly" form controls without styling
+        </h2>
+        <form id="ugly">
+            <div>
+                <label for="ugly_select">Select box:</label>
+                <div class="select-wrapper"><select id="ugly_select" name="select">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Lemon</option>
+                </select></div>
+            </div>
+            <div>
+                <label for="ugly_my_fruit">"Favorite fruit?" datalist:</label>
+                <input id="ugly_my_fruit"  type="text" name="my_fruit" list="my_suggestion">
+                <datalist id="my_suggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="ugly_date_1">Datetime local: </label>
+                <input id="ugly_date_1" type="datetime-local" name="date_1">
+            </div>
+            <div>
+                <label for="ugly_range">Range: </label>
+                <input id="ugly_range" type="range" name="range">
+            </div>
+            <div>
+                <label for="ugly_color">Color: </label>
+                <input id="ugly_color" type="color" name="color">
+            </div>
+            <div>
+                <label for="ugly_file">File picker: </label>
+                <input id="ugly_file" type="file" name="file" multiple>
+                <ul id="ugly_file_list">
+
+                </ul>
+            </div>
+            <div>
+                <label for="ugly_progress">Progress: </label>
+                <progress id="ugly_progress" max="100" value="75">75/100</progress>
+            </div>
+            <div>
+                <label for="ugly_meter">Meter: </label>
+                <meter  id="ugly_meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+            </div>
+            <div><button>Submit?</button></div>
+        </form>
+    </section>
+    <section>
+        <h2>
+            Styled "ugly" form controls
+        </h2>
+        <form id="style_ugly">
+            <div>
+                <label for="styled_ugly_select">Select box:</label>
+                <div class="select-wrapper"><select id="styled_ugly_select" name="select">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Lemon</option>
+                </select></div>
+            </div>
+            <div>
+                <label for="styled_ugly_my_fruit">"Favorite fruit?" datalist:</label>
+                <input id="styled_ugly_my_fruit"  type="text" name="my_fruit" list="styled_my_suggestion">
+                <datalist id="styled_my_suggestion">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Blackberry</option>
+                    <option>Blueberry</option>
+                    <option>Lemon</option>
+                    <option>Lychee</option>
+                    <option>Peach</option>
+                    <option>Pear</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="styled_ugly_date_1">Datetime local: </label>
+                <input id="styled_ugly_date_1" type="datetime-local" name="date_1">
+            </div>
+            <div>
+                <label for="styled_ugly_range">Range: </label>
+                <input id="styled_ugly_range" type="range" name="range">
+            </div>
+            <div>
+                <label for="styled_ugly_color">Color: </label>
+                <input id="styled_ugly_color" type="color" name="color">
+            </div>
+            <div>
+                <label for="styled_ugly_file">Choose a file to upload</label>
+                <input id="styled_ugly_file" type="file" name="file" multiple>
+                <ul id="styled_ugly_file_list">
+
+                </ul>
+            </div>
+            <div>
+                <label for="styled_ugly_progress">Progress: </label>
+                <progress id="styled_ugly_progress" max="100" value="75">75/100</progress>
+            </div>
+            <div>
+                <label for="styled_ugly_meter">Meter: </label>
+                <meter  id="styled_ugly_meter" min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+            </div>
+            <div><button>Submit?</button></div>
+        </form>
+    </section>
+</div>
+</body>
+</html>
