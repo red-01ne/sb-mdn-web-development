@@ -1,0 +1,413 @@
+body {
+    margin: 1rem auto;
+    width: 1440px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.grid > section h2 {
+    height: calc(1.5rem * 1.2 * 2);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: max-content;
+}
+
+form div + div {
+    margin-top: .5rem;
+}
+
+/* || styles for require attribute */
+
+#require_form input:required {
+    border: 1px solid black;
+}
+
+#require_form input:optional {
+    border: 1px solid silver;
+}
+
+/* || example of custom styled radio inputs with usage of generated content and state pseudo class */
+
+.custom-radio input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.custom-radio input[type="radio"] {
+    border-radius: 10px;
+    border: 2px solid gray;
+    width: 20px;
+    height: 20px;
+    /* adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -4px;
+    outline: none;
+}
+
+.custom-radio input[type="radio"]::before {
+    display: block;
+    content: " ";
+    border-radius: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+.custom-radio input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+#generated_content_with_checked_form input ~ span {
+    position: relative;
+}
+
+#generated_content_with_checked_form input:default ~ span::after {
+    content: "Default";
+    position: absolute;
+    right: -65px;
+    top: -3px;
+    padding: 6px 10px 4px;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+}
+
+#generated_content_without_checked_form input[type="radio"]:indeterminate {
+    border: 2px solid red;
+    animation: 0.4s linear infinite alternate border-pulse;
+}
+
+@keyframes border-pulse {
+    from {
+        border: 2px solid red;
+    }
+
+    to {
+        border: 6px solid red;
+    }
+}
+
+/* || example of generated content with required pseudo class */
+
+#generated_content_with_require_form fieldset {
+    padding: 10px 30px 0;
+}
+
+#generated_content_with_require_form legend {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+}
+
+#generated_content_with_require_form fieldset > div {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+}
+
+#generated_content_with_require_form button,
+#generated_content_with_require_form label,
+#generated_content_with_require_form input {
+    display: block;
+    margin: 0;
+    padding: .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#generated_content_with_require_form input {
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ccc;
+}
+
+#generated_content_with_require_form input:hover,
+#generated_content_with_require_form input:focus {
+    background-color: #eee;
+}
+
+#generated_content_with_require_form input + span {
+    position: relative;
+}
+/*
+#generated_content_with_require_form div.contains-required-input {
+    position: relative;
+}
+*/
+#generated_content_with_require_form input:required + span::after {
+    content: "required";
+    position: absolute;
+    top: -26px;
+    left: -70px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+}
+/*
+#generated_content_with_require_form div.contains-required-input::after {
+    content: "required";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+}
+*/
+#generated_content_with_require_form button {
+    margin: 0 auto;
+    width: 60%;
+}
+
+/* || example of validation pseudo classes usage */
+
+#constraint_validation_form fieldset {
+    padding: 10px 30px 0;
+}
+
+#constraint_validation_form legend {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+}
+
+#constraint_validation_form fieldset > div {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+}
+
+#constraint_validation_form button,
+#constraint_validation_form label,
+#constraint_validation_form input {
+    display: block;
+    margin: 0;
+    padding: .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#constraint_validation_form input {
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ccc;
+}
+
+#constraint_validation_form input:hover,
+#constraint_validation_form input:focus {
+    background-color: #eee;
+}
+
+#constraint_validation_form input + span {
+    position: relative;
+}
+
+#constraint_validation_form input + span::after {
+    position: absolute;
+    top: -26px;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+}
+
+#constraint_validation_form input:required + span::after {
+    content: "required";
+    left: -70px;
+    background-color: black;
+    color: white;
+}
+
+#constraint_validation_form input:out-of-range + span::after {
+    content: "Outside allowable value range";
+    left: -182px;
+    /*width: 155px;*/
+    background-color: red;
+    color: white;
+}
+
+#constraint_validation_form input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+}
+
+#constraint_validation_form input:invalid {
+    border: 2px solid red;
+}
+
+#constraint_validation_form input:invalid + span::before {
+    content: '✖';
+    color: red;
+}
+
+#constraint_validation_form input:valid + span::before {
+    content: '✓';
+    color: green;
+}
+
+#constraint_validation_form button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* || example of enabled/disabled pseudo classes usage */
+
+#disable_constraint_form fieldset {
+    margin-bottom: 20px;
+    padding: 10px 30px 0;
+}
+
+#disable_constraint_form legend {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+}
+
+#disable_constraint_form fieldset > div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#disable_constraint_form button,
+#disable_constraint_form label,
+#disable_constraint_form input[type="text"] {
+    display: block;
+    margin: 0;
+    padding: .5rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#disable_constraint_form input {
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ccc;
+}
+
+#disable_constraint_form input:hover, input:focus {
+    background-color: #eee;
+}
+
+#disable_constraint_form input[type="text"]:disabled {
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+#disable_constraint_form .disabled-label {
+    color: #aaa;
+}
+/*
+#disable_constraints_form input[type="text"]:disabled ~ label {
+    color: #aaa;
+}
+*/
+#disable_constraint_form button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* || example of read-only/read-write pseudo classes usage */
+/*
+#read_only_constraint_form {
+    width: 100%;
+}
+*/
+#read_only_constraint_form fieldset {
+    margin-bottom: 20px;
+    padding: 10px 30px 0;
+}
+
+#read_only_constraint_form legend {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+}
+
+#read_only_constraint_form fieldset > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#read_only_constraint_form button,
+#read_only_constraint_form label,
+#read_only_constraint_form input[type="text"],
+#read_only_constraint_form textarea {
+    display: block;
+    margin: 0;
+    padding: .5rem;
+    box-sizing: border-box;
+    height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#read_only_constraint_form input[type="text"],
+#read_only_constraint_form textarea {
+    width: 50%
+}
+
+#read_only_constraint_form textarea {
+    resize: none;
+    height: 110px;
+}
+
+#read_only_constraint_form label {
+    width: 40%;
+}
+
+#read_only_constraint_form input:hover,
+#read_only_constraint_form input:focus,
+#read_only_constraint_form textarea:hover,
+#read_only_constraint_form textarea:focus {
+    background-color: #eee;
+}
+
+#read_only_constraint_form button {
+    width: 60%;
+    margin: 20px auto;
+}
+
+#read_only_constraint_form input:-moz-read-only,
+#read_only_constraint_form textarea:-moz-read-only,
+#read_only_constraint_form input:read-only,
+#read_only_constraint_form textarea:read-only {
+    border: 0;
+    box-shadow: none;
+    background-color: white;
+}
+
+/* partial fix for Chrome v.93
+#read_only_constraint_form input[readonly],
+#read_only_constraint_form textarea[readonly] {
+    border: 0;
+    box-shadow: none;
+    background-color: white;
+}
+*/
+#read_only_constraint_form textarea:-moz-read-write,
+#read_only_constraint_form textarea:read-write {
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ccc;
+}

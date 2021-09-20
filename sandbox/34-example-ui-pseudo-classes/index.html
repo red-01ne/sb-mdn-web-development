@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example - UI pseudo classes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+<div class="grid">
+    <section>
+        <h2>Styling inputs based on require attribute</h2>
+        <form id="require_form">
+            <fieldset>
+                <legend>Feedback form</legend>
+                <div>
+                    <label for="require_form_first_name">First name: </label>
+                    <input id="require_form_first_name" type="text" name="first_name" required>
+                </div>
+                <div>
+                    <label for="require_form_last_name">Last name: </label>
+                    <input id="require_form_last_name" type="text" name="last_name" required>
+                </div>
+                <div>
+                    <label for="require_form_email">Email address (include if you want a response): </label>
+                    <input id="require_form_email" type="email" name="email">
+                </div>
+                <div><button>Submit</button></div>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Custom styled radio inputs with usage of generated content and state pseudo class</h2>
+        <form id="generated_content_with_checked_form" class="custom-radio">
+            <fieldset>
+                <legend>Choose your favourite fruit</legend>
+                <p>
+                    <input id="generated_content_with_checked_form_cherry" name="fruit" type="radio" value="cherry">
+                    <label for="generated_content_with_checked_form_cherry">Cherry</label>
+                    <span></span>
+                </p>
+                <p>
+                    <input id="generated_content_with_checked_form_banana" name="fruit" type="radio" value="banana" checked>
+                    <label for="generated_content_with_checked_form_banana">Banana</label>
+                    <span></span>
+                </p>
+                <p>
+                    <input id="generated_content_with_checked_form_strawberry" name="fruit" type="radio"  value="strawberry">
+                    <label for="generated_content_with_checked_form_strawberry">Strawberry</label>
+                    <span></span>
+                </p>
+            </fieldset>
+        </form>
+        <form id="generated_content_without_checked_form" class="custom-radio">
+            <fieldset>
+                <legend>Choose your favourite fruit</legend>
+                <p>
+                    <input id="generated_content_without_checked_form_cherry" name="fruit" type="radio" value="cherry">
+                    <label for="generated_content_without_checked_form_cherry">Cherry</label>
+                    <span></span>
+                </p>
+                <p>
+                    <input id="generated_content_without_checked_form_banana" name="fruit" type="radio" value="banana">
+                    <label for="generated_content_without_checked_form_banana">Banana</label>
+                    <span></span>
+                </p>
+                <p>
+                    <input id="generated_content_without_checked_form_strawberry" name="fruit" type="radio"  value="strawberry">
+                    <label for="generated_content_without_checked_form_strawberry">Strawberry</label>
+                    <span></span>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Styled form with usage of generated content and require pseudo class</h2>
+        <form id="generated_content_with_require_form">
+            <fieldset>
+                <legend>Feedback form</legend>
+                <p>Required fields are labelled with "required".</p>
+                <div class="contains-required-input">
+                    <label for="generated_content_with_require_form_first_name">First name: </label>
+                    <input id="generated_content_with_require_form_first_name" type="text"  name="first_name" required>
+                    <span></span>
+                </div>
+                <div class="contains-required-input">
+                    <label for="generated_content_with_require_form_last_name">Last name: </label>
+                    <input id="generated_content_with_require_form_last_name" type="text" name="last_name" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="generated_content_with_require_form_email">Email address (include if you want a response): </label>
+                    <input id="generated_content_with_require_form_email" type="email"  name="email">
+                    <span></span>
+                </div>
+                <div><button>Submit</button></div>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Form styling with addition of form constraint validation pseudo classes</h2>
+        <form id="constraint_validation_form">
+            <fieldset>
+                <legend>Feedback form</legend>
+                <p>Required fields are labelled with "required".</p>
+                <div>
+                    <label for="constraint_validation_form_first_name">First name: </label>
+                    <input id="constraint_validation_form_first_name" name="first_name" type="text" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="constraint_validation_form_last_name">Last name: </label>
+                    <input id="constraint_validation_form_last_name" name="last_name" type="text" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="constraint_validation_form_age">Age (must be 12+): </label>
+                    <input id="constraint_validation_form_age" name="age" type="number" min="12" max="120" required>
+                    <span></span>
+                </div>
+                <div>
+                    <label for="constraint_validation_form_email">Email address (include if you want a response): </label>
+                    <input id="constraint_validation_form_email" name="email" type="email">
+                    <span></span>
+                </div>
+                <div><button>Submit</button></div>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <h2>Form styling with usage of enabled/disabled pseudo classes</h2>
+        <form id="disable_constraint_form">
+            <fieldset id="disable_constraint_form_shipping">
+                <legend>Shipping address</legend>
+                <div>
+                    <label for="disable_constraint_form_shipping_name">Name: </label>
+                    <input id="disable_constraint_form_shipping_name" name="shipping_name" type="text" required>
+                </div>
+                <div>
+                    <label for="disable_constraint_form_shipping_address">Address: </label>
+                    <input id="disable_constraint_form_shipping_address" name="shipping_address" type="text" required>
+                </div>
+                <div>
+                    <label for="disable_constraint_form_shipping_post_code">Zip/postal code: </label>
+                    <input id="disable_constraint_form_shipping_post_code" name="shipping_post_code" type="text" required>
+                </div>
+            </fieldset>
+            <fieldset id="disable_constraint_form_billing">
+                <legend>Billing address</legend>
+                <div>
+                    <label for="disable_constraint_form_same_billing">Same as shipping address:</label>
+                    <input id="disable_constraint_form_same_billing" type="checkbox" checked>
+                </div>
+                <div>
+                    <label for="disable_constraint_form_billing_name" class="billing-label disabled-label">Name: </label>
+                    <input id="disable_constraint_form_billing_name" name="billing_name" type="text" disabled required>
+                </div>
+                <div>
+                    <label for="disable_constraint_form_billing_address" class="billing-label disabled-label">Address: </label>
+                    <input id="disable_constraint_form_billing_address" name="billing_address" type="text" disabled required>
+                </div>
+                <div>
+                    <label for="disable_constraint_form_billing_post_code" class="billing-label disabled-label">Zip/postal code: </label>
+                    <input id="disable_constraint_form_billing_post_code" name="billing_post_code" type="text" disabled required>
+                </div>
+            </fieldset>
+            <div><button>Submit</button></div>
+        </form>
+    </section>
+    <section>
+        <h2>Form styling with usage of read-write/read-only pseudo classes</h2>
+        <form id="read_only_constraint_form">
+            <fieldset>
+                <legend contenteditable="true">Check shipping details</legend>
+                <div>
+                    <label for="read_only_constraint_form_name">Name: </label>
+                    <input id="read_only_constraint_form_name" name="name" type="text" value="Mr Soft" readonly>
+                </div>
+                <div>
+                    <label for="read_only_constraint_form_address">Address: </label>
+                    <textarea id="read_only_constraint_form_address" name="address" readonly>23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA</textarea>
+                </div>
+                <div>
+                    <label for="read_only_constraint_form_post_code">Zip/postal code: </label>
+                    <input id="read_only_constraint_form_post_code" name="post_code" type="text" value="94708" readonly>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Final instructions</legend>
+                <div>
+                    <label for="read_only_constraint_form_sms_confirm">Send confirmation by SMS?</label>
+                    <input id="read_only_constraint_form_sms_confirm" name="sms_confirm" type="checkbox">
+                </div>
+                <div>
+                    <label for="read_only_constraint_form_instructions">Any special instructions?</label>
+                    <textarea id="read_only_constraint_form_instructions" name="instructions"></textarea>
+                </div>
+            </fieldset>
+            <div><button type="button">Amend details</button></div>
+            <div><button type="submit">Submit</button></div>
+        </form>
+    </section>
+</div>
+</body>
+</html>
