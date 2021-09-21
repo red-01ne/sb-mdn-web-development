@@ -1,0 +1,203 @@
+body {
+    margin: 4rem auto;
+    width: 1440px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+}
+
+.grid-container > section {
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+.grid-container > section h2 {
+    margin: 0;
+    border-radius: .5rem .5rem 0 0;
+    height: calc(1.5rem * 1.2 * 2);
+    background-color: silver;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.grid-container > section form {
+    margin: 2rem auto;
+    width: max-content;
+}
+
+/* || simple built-in form validation example */
+/*
+#simple_built_in_validation_form input {
+    outline: none;
+    border-radius: 4px;
+    border-style: dashed;
+}
+
+#simple_built_in_validation_form input:hover,
+#simple_built_in_validation_form input:focus {
+    border-style: solid;
+}
+
+#simple_built_in_validation_form input:valid {
+    border-color: green;
+}
+
+#simple_built_in_validation_form input:invalid {
+    border-color: red;
+}
+
+#simple_built_in_validation_form input:valid:required {
+    background-image: linear-gradient(to right, whitesmoke, greenyellow);
+}
+
+#simple_built_in_validation_form input:invalid:required {
+    background-image: linear-gradient(to right, whitesmoke, pink);
+}
+*/
+form.highlight-inputs input {
+    outline: none;
+    border-radius: 4px;
+    border-style: dashed;
+}
+
+form.highlight-inputs input:hover,
+form.highlight-inputs input:focus {
+    border-style: solid;
+}
+
+form.highlight-inputs input:valid {
+    border-color: green;
+}
+
+form.highlight-inputs input:invalid {
+    border-color: red;
+}
+
+form.highlight-inputs input:valid:required {
+    background-image: linear-gradient(to right, whitesmoke, greenyellow);
+}
+
+form.highlight-inputs input:invalid:required {
+    background-image: linear-gradient(to right, whitesmoke, pink);
+}
+
+/* || full example of built-in form validation */
+
+#full_built_in_validation_form {
+    font: 1em sans-serif;
+    max-width: 320px;
+}
+
+#full_built_in_validation_form p > label {
+    display: block;
+}
+
+#full_built_in_validation_form input[type="text"],
+#full_built_in_validation_form input[type="email"],
+#full_built_in_validation_form input[type="number"],
+#full_built_in_validation_form textarea,
+#full_built_in_validation_form fieldset {
+    width : 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+#full_built_in_validation_form input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+#full_built_in_validation_form input:focus:invalid {
+    box-shadow: none;
+}
+
+/* || extended example of constraint validation API */
+
+#extended_constraint_validation_api_form p * {
+    display: block;
+}
+
+#extended_constraint_validation_api_form input[type=email] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: inherit;
+    font-size: 90%;
+}
+
+/* this is our style for the invalid fields */
+
+#extended_constraint_validation_api_form input:invalid {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+#extended_constraint_validation_api_form input:invalid:focus {
+    outline: none;
+}
+
+/* this is the style of our error messages */
+
+#extended_constraint_validation_api_form .error {
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    box-sizing: border-box;
+    width  : 100%;
+    background-color: #900;
+    color: white;
+    font-size: 80%;
+}
+
+#extended_constraint_validation_api_form .error.active {
+    padding: 0.3em;
+}
+
+/* || example of form validation without usage of the constraint validation API */
+
+#without_constraint_validation_api_form p * {
+    display: block;
+}
+
+#without_constraint_validation_api_form input.email {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: inherit;
+    font-size: 90%;
+}
+
+/* this is our style for the invalid fields */
+
+#without_constraint_validation_api_form input.invalid{
+    border-color: #900;
+    background-color: #FDD;
+}
+
+#without_constraint_validation_api_form input.invalid:focus {
+    outline: none;
+}
+
+/* this is the style of our error messages */
+
+#without_constraint_validation_api_form .error {
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    box-sizing: border-box;
+    width  : 100%;
+    background-color: #900;
+    color: white;
+    font-size: 80%;
+}
+
+#without_constraint_validation_api_form .error.active {
+    padding: 0.3em;
+}
