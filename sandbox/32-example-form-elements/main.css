@@ -7,6 +7,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
+            "header header header"
             "form output-1 output-2";
     gap: 2rem;
     margin-top: 2rem;
@@ -18,6 +19,12 @@ body {
 .form-container > *:not(:first-child) {
     border-left: 6px solid #6888bd;
     padding-left: 2rem;
+}
+
+.form-container > h2 {
+    grid-area: header;
+    margin: 0;
+    text-align: center;
 }
 
 .form-container > form {
@@ -51,12 +58,12 @@ input {
 }
 
 label {
-    width: 25%;
+    width: 50%;
     text-align: right;
 }
 
 input {
-    width: calc(75% - 1em);
+    width: calc(50% - 1em);
 }
 
 button {
@@ -68,4 +75,9 @@ button {
 output {
     display: block;
     white-space: pre;
+}
+
+#form_c label,
+#form_c input {
+    vertical-align: top;
 }

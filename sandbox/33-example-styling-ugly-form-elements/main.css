@@ -1,0 +1,281 @@
+body {
+    margin: 0 auto;
+    width: 1440px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.appearance-none input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* || styled checkboxes */
+
+.appearance-none.styled-checkboxes input[type="checkbox"] {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid gray;
+    /* adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -5px;
+    /* set here so that Windows' High-Contrast Mode can override */
+    color: green;
+}
+
+.appearance-none.styled-checkboxes input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2rem;
+    right: -1px;
+    top: -0.5rem;
+    visibility: hidden;
+}
+
+.appearance-none.styled-checkboxes input[type="checkbox"]:checked::before {
+    /* use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+}
+
+.appearance-none.styled-checkboxes input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+/* || styled radio buttons */
+
+.appearance-none.styled-radio input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    /* adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -5px;
+    outline: none;
+}
+
+.appearance-none.styled-radio input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2rem;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+.appearance-none.styled-radio input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+/* || toggle switch */
+
+.toggle-switch-container,
+.toggle-switch-container * {
+    box-sizing: border-box;
+}
+
+/* flexbox fu to make the control and label line up */
+
+.toggle-switch-container {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+/*
+   size the label, and make the on and off parts sit on top
+   of one another using positioning
+*/
+
+.toggle-switch-container label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+
+.toggle-switch-container label span {
+    position: absolute;
+}
+
+/*
+   remove the default styling of the checkbox
+   using appearance (which is already applied)
+   and create the outer toggle area
+*/
+
+.toggle-switch-container input[type="checkbox"] {
+    /*-webkit-appearance: none;*/
+    /*appearance: none;*/
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid black;
+    background: #eee;
+    transition: all 0.4s;
+}
+
+/*
+   style the ::before content to look like
+   the inner toggle switch - the bit that moves
+*/
+
+.toggle-switch-container input[type="checkbox"]::before {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    transition: all 0.4s;
+}
+
+/*
+   change the outer background color and move the inner toggle switch
+   when the checkbox is checked; use transitions for smooth animation
+*/
+
+.toggle-switch-container input[type="checkbox"]:checked {
+    background-color: #ffaa00;
+    transition: all 0.4s;
+}
+
+.toggle-switch-container input[type="checkbox"]:checked::before {
+    left: 35%;
+    transition: all 0.4s;
+}
+
+/*
+   cause the on and off parts of the label to be visible when the checkbox is
+   checked and unchecked, respectively
+*/
+
+.toggle-switch-container input[type="checkbox"] ~ label .toggle-switch-on,
+.toggle-switch-container input[type="checkbox"]:checked ~ label .toggle-switch-off {
+    opacity: 0;
+}
+
+.toggle-switch-container input[type="checkbox"] ~ label .toggle-switch-off,
+.toggle-switch-container input[type="checkbox"]:checked ~ label .toggle-switch-on {
+    opacity: 1;
+}
+
+/*
+   make the focus outline a bit more subtle on Chrome, rather than the
+   default heavy blue outline
+*/
+
+.toggle-switch-container input:focus {
+    outline: 1px dotted black;
+}
+
+/* || styled "ugly" form controls*/
+
+#ugly > div,
+#style_ugly > div {
+    margin-bottom: 20px;
+}
+
+#style_ugly label {
+    margin-bottom: 5px;
+}
+
+#style_ugly button,
+#style_ugly label,
+#style_ugly input,
+#style_ugly select,
+#style_ugly progress,
+#style_ugly meter {
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+#style_ugly input[type="text"],
+#style_ugly input[type="datetime-local"],
+#style_ugly input[type="color"],
+#style_ugly select {
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px #ccc;
+}
+
+#style_ugly button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#style_ugly select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#style_ugly .select-wrapper {
+    position: relative;
+}
+
+#style_ugly .select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 1rem;
+}
+
+#style_ugly input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background: red;
+    height: 2px;
+    padding: 0;
+    outline: 1px solid transparent;
+}
+
+#style_ugly input[type="color"] {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+#style_ugly input[type="file"] {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+#style_ugly label[for="styled_ugly_file"] {
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #ccc;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    text-align: center;
+    line-height: 1.8;
+}
+
+#style_ugly label[for="styled_ugly_file"]:hover {
+    background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+#style_ugly label[for="styled_ugly_file"]:active {
+    box-shadow: inset 1px 1px 3px #ccc;
+}
