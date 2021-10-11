@@ -25,6 +25,10 @@ A sandbox for implementing examples and work on exercises
 * [ ] Server-side website programming
 * [ ] Further resources
 
+## Requirements
+
+- Node.js version 12.13.0 (at least)
+
 ## License
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) license.  
