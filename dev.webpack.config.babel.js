@@ -6,9 +6,15 @@ const config = {
     mode: "development",
     devtool: "eval-source-map",
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        watchContentBase: true,
-        overlay: true
+        static: {
+            directory: path.join(__dirname, "./sandbox"),
+            publicPath: "/sandbox",
+            serveIndex: true,
+            watch: true,
+        },
+        client: {
+            overlay: true,
+        }
     },
     entry: {
         app: "./src/index.js",
