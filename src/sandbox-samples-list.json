@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Example: basic page",
+    "publicDirectory": "01-example-basic-page"
+  },
+  {
+    "title": "Example: meta data",
+    "publicDirectory": "02-example-meta-data"
+  },
+  {
+    "title": "Example: text formatting",
+    "publicDirectory": "03-example-text-formatting"
+  },
+  {
+    "title": "Example: hyperlinks",
+    "publicDirectory": "04-example-hyperlinks"
+  },
+  {
+    "title": "Exercise: letter markup",
+    "publicDirectory": "05-exercise-letter-markup"
+  },
+  {
+    "title": "Exercise: page structure",
+    "publicDirectory": "06-exercise-page-structure"
+  },
+  {
+    "title": "Example: video and audio",
+    "publicDirectory": "07-example-video-and-audio"
+  },
+  {
+    "title": "Example: responsive images",
+    "publicDirectory": "08-example-responsive-images"
+  },
+  {
+    "title": "Exercise: splash page",
+    "publicDirectory": "09-exercise-splash-page"
+  },
+  {
+    "title": "Example: timetable",
+    "publicDirectory": "10-example-timetable"
+  },
+  {
+    "title": "Example: items sold",
+    "publicDirectory": "11-example-items-sold"
+  },
+  {
+    "title": "Exercise: planets data",
+    "publicDirectory": "12-exercise-planets-data"
+  },
+  {
+    "title": "Exercise: styled biography",
+    "publicDirectory": "13-exercise-styled-biography"
+  },
+  {
+    "title": "Example: punk bands",
+    "publicDirectory": "14-example-punk-bands"
+  },
+  {
+    "title": "Exercise: business card",
+    "publicDirectory": "15-exercise-business-card"
+  },
+  {
+    "title": "Exercise: letter headed paper",
+    "publicDirectory": "16-exercise-letter-headed-paper"
+  },
+  {
+    "title": "Exercise: cool box",
+    "publicDirectory": "17-exercise-cool-box"
+  },
+  {
+    "title": "Exercise: community school homepage",
+    "publicDirectory": "18-exercise-community-school-homepage"
+  },
+  {
+    "title": "Example: flexbox layout",
+    "publicDirectory": "19-example-flexbox-layout"
+  },
+  {
+    "title": "Example: grid layout",
+    "publicDirectory": "20-example-grid-layout"
+  },
+  {
+    "title": "Example: float",
+    "publicDirectory": "21-example-float"
+  },
+  {
+    "title": "Example: positioning",
+    "publicDirectory": "22-example-positioning"
+  },
+  {
+    "title": "Example: multi-column layout",
+    "publicDirectory": "23-example-multi-column-layout"
+  },
+  {
+    "title": "Example: media queries",
+    "publicDirectory": "24-example-media-queries"
+  },
+  {
+    "title": "Exercise: responsive design",
+    "publicDirectory": "25-exercise-responsive-design"
+  },
+  {
+    "title": "Example: legacy layout",
+    "publicDirectory": "26-example-legacy-layout"
+  },
+  {
+    "title": "Example: grid framework",
+    "publicDirectory": "27-example-grid-framework"
+  },
+  {
+    "title": "Exercise: layout comprehension",
+    "publicDirectory": "28-exercise-layout-comprehension"
+  },
+  {
+    "title": "Example: contact form",
+    "publicDirectory": "29-example-contact-form"
+  },
+  {
+    "title": "Example: payment form",
+    "publicDirectory": "30-example-payment-form"
+  },
+  {
+    "title": "Example: postcard contact form",
+    "publicDirectory": "31-example-postcard-contact-form"
+  },
+  {
+    "title": "Example: form elements",
+    "publicDirectory": "32-example-form-elements"
+  },
+  {
+    "title": "Example: styling ugly form elements",
+    "publicDirectory": "33-example-styling-ugly-form-elements"
+  },
+  {
+    "title": "Example: UI pseudo classes",
+    "publicDirectory": "34-example-ui-pseudo-classes"
+  },
+  {
+    "title": "Example: client side form validation",
+    "publicDirectory": "35-example-client-side-form-validation"
+  }
+]

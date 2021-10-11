@@ -1,0 +1,81 @@
+.sample-container {
+    margin: 0;
+    border: 1px solid darkgrey;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.sample-container.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 4rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    /*background-color: rgba(169, 169, 169, .75);*/
+}
+
+.sample-container header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sample-container.contracted header {
+    height: 100%;
+}
+
+.sample-container.expanded header {
+    height: auto;
+}
+
+.sample-container header h2 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.sample-container.expanded header h2 {
+    font-size: 3rem;
+}
+
+.sample-container.contracted button.contract-expand {
+    /*margin-left: 1rem;*/
+    width: 32px;
+    height: 32px;
+}
+
+.sample-container.expanded button.contract-expand {
+    /*margin-left: 2rem;*/
+    width: 64px;
+    height: 64px;
+}
+
+.sample-container.contracted .sample {
+    display: none;
+}
+
+.sample-container button.contract-expand {
+    border-radius: .5rem;
+    padding: .25rem;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: contain;
+}
+
+.sample-container.contracted button.contract-expand {
+    background-image: url("../assets/enlarge.png");
+}
+
+.sample-container.expanded .sample {
+    display: block;
+    margin-top: 4rem;
+    width: 100%;
+    height: 85%;
+}
+
+.sample-container.expanded button.contract-expand {
+    background-image: url("../assets/shrink.png");
+}
