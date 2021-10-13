@@ -18,7 +18,7 @@ A sandbox for implementing examples and work on exercises
   - [x] CSS layout
 * [ ] JavaScript - dynamic client-side scripting
 * [ ] Web forms - working with user data
-  - [ ] Core forms learning pathway
+  - [x] Core forms learning pathway
   - [ ] Advanced forms articles
 * [ ] Accessibility - make the web usable by everyone
 * [ ] Tools and testing
